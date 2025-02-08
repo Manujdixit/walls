@@ -1,50 +1,140 @@
-# Welcome to your Expo app 👋
+# Walls - Mobile Wallpaper App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native application for discovering, saving, and managing mobile wallpapers built with Expo Router.
 
-## Get started
+## Features
 
-1. Install dependencies
+- 📱 Browse curated wallpapers in the Explore tab
+- ❤️ Like and save favorite wallpapers
+- 📚 Personal wallpaper library management
+- 🔍 Discover suggested wallpapers
+- 👤 User account management
+- 🌓 Support for both light and dark themes
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- [Expo](https://expo.dev/) - React Native development platform
+- [Expo Router](https://docs.expo.dev/routing/introduction/) - File-based routing
+- [React Navigation](https://reactnavigation.org/) - Navigation library
+- [@gorhom/bottom-sheet](https://gorhom.github.io/react-native-bottom-sheet/) - Bottom sheet component
+- [Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Animations
+- [Expo Haptics](https://docs.expo.dev/versions/latest/sdk/haptics/) - Haptic feedback
 
-   ```bash
-    npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+### Prerequisites
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js >= 14
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Installation
 
-## Get a fresh project
-
-When you're ready, run:
+1. Clone the repository:
 
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/walls.git
+cd walls
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
 
-## Learn more
+```bash
+npm install
+# or
+yarn install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Start the development server:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm start
+# or
+yarn start
+```
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+walls/
+├── app/                   # Main application code
+│   ├── (auth)/           # Authentication routes
+│   ├── (tabs)/           # Tab navigation screens
+│   └── _layout.tsx       # Root layout
+├── components/           # Reusable components
+├── constants/           # App constants and theme
+├── hooks/              # Custom hooks
+├── services/          # API and other services
+└── types/            # TypeScript definitions
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Development
+
+### Running on iOS Simulator
+
+```bash
+npm run ios
+# or
+yarn ios
+```
+
+### Running on Android Emulator
+
+```bash
+npm run android
+# or
+yarn android
+```
+
+### Testing
+
+```bash
+npm test
+# or
+yarn test
+```
+
+## Environment Variables
+
+Create a `.env` file in the root directory:
+
+```
+API_URL=your_api_url
+API_KEY=your_api_key
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Coding Standards
+
+- Follow the ESLint configuration
+- Write unit tests for new features
+- Update documentation as needed
+- Follow the conventional commits specification
+
+## Troubleshooting
+
+- If you encounter build issues, try clearing the cache:
+  ```bash
+  expo start -c
+  ```
+- For iOS build problems:
+  ```bash
+  cd ios && pod install && cd ..
+  ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Expo Team](https://expo.dev/) for the amazing development platform
+- [React Native Community](https://reactnative.dev/community/overview) for their support
+- All contributors who have helped this project grow
